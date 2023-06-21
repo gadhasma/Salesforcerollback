@@ -4,8 +4,7 @@ pr: none
 jobs:
   - job: Deploy
     variables:
-      ${{ each group in groups.sfdx-org-dev }}:
-        - group: ${{ group }}
+      - group: sfdx-org-dev
     steps:
       - task: UseNode@1
         displayName: Use Node.js 16.15.0
